@@ -1,0 +1,397 @@
+html {
+  background-color: #f4f4f4;
+
+}
+
+.container {
+  width: 1190px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* 外部图标 */
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: 'iconfont';
+  /* Project id 4254833 */
+  src: url('//at.alicdn.com/t/c/font_4254833_097p7700tqre.woff2?t=1696133387492') format('woff2'),
+    url('//at.alicdn.com/t/c/font_4254833_097p7700tqre.woff?t=1696133387492') format('woff'),
+    url('//at.alicdn.com/t/c/font_4254833_097p7700tqre.ttf?t=1696133387492') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  padding-right: 13px;
+}
+
+/* #region 侧边栏 */
+
+.main-sidebar {
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  overflow: auto;
+}
+
+/* 让滚动条隐藏 */
+.main-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+/* 侧边栏主标题 */
+.sidebar-brand {
+  width: 100%;
+  text-align: center;
+  height: 60px;
+  position: relative;
+  /* background-color: aqua; */
+}
+
+.sidebar-brand .cherry {
+  width: 20px;
+  height: 20px;
+
+  /* 让图片显示居中 */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 侧边栏 */
+.sidebar-menu li {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.menu-nav,
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+  width: 100%;
+  letter-spacing: .3px;
+  color: #78828a;
+  box-sizing: border-box;
+  transition-property: padding, background-color;
+  transition-duration: .3s;
+  cursor: pointer;
+}
+
+.sidebar-menu li a:hover {
+  background-color: #f8fafb;
+}
+
+.sidebar-menu li a span {
+  margin-top: -2px;
+}
+
+.sidebar-menu li.menu-header {
+  padding: 3px 15px;
+  color: #a1a8ae;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 600;
+}
+
+/* 下拉列表 */
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown .menu-nav {
+  position: relative;
+}
+
+.dropdown .menu-nav .dropdown-arrow {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 12px;
+  transition: all .4s linear;
+}
+
+.dropdown .dropdown-menu {
+  display: none;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.dropdown .dropdown-menu li a {
+  padding-left: 50px;
+  font-size: 12px;
+}
+
+.dropdown .dropdown-menu li a:hover {
+  color: #6777ef;
+}
+
+/* 鼠标点击后效果，JS实现 */
+.sidebar-menu li.active a {
+  color: #6777ef;
+  font-weight: 1000;
+  background-color: white;
+  padding-left: 16px;
+}
+
+.sidebar-menu .dropdown.active .dropdown-menu {
+  display: block;
+}
+
+.sidebar-menu .dropdown.active .dropdown-menu a {
+  color: #868e96;
+  padding-left: 50px;
+  height: 45px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.sidebar-menu .dropdown.active .dropdown-arrow {
+  transform: translate(-30%, 0) rotate(90deg);
+}
+
+/* #endregion 侧边栏 */
+
+/* #region 中心区 */
+
+/* 设置初始化，让背景为白色，边框圆形 */
+.init {
+  box-sizing: border-box;
+  border-radius: 9px;
+  background-color: white;
+
+  /* 水平位置 垂直位置 模糊程度 阴影颜色 */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.03);
+}
+
+/* 顶部栏 */
+.topbar {
+  /* border: 1px solid ; */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* 时间栏 */
+.timebar {
+  margin: 20px 0;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.nowtime {
+  font-size: 120px;
+  font-weight: 500;
+}
+
+/* 中心内容区 */
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 内容区模块设置 */
+.content {
+  height: 300px;
+  width: 370px;
+  text-align: center;
+  transition: all linear .2s;
+  margin-bottom: 15px;
+}
+
+/* 内容区中间模块设置 */
+.content:nth-child(3n+2) {
+  margin: 0 40px;
+}
+
+.content:hover {
+  transform: translate(-2px, -2px);
+}
+
+.main-content div a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* 垂直居中 */
+  justify-content: center;
+
+  /* 水平居中 */
+  height: 100%;
+
+  box-sizing: border-box;
+}
+
+.main-content .content-brand {
+  height: 100px;
+  line-height: 100px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 200px;
+  position: relative;
+}
+
+.main-content .content-brand i {
+  position: absolute;
+  transform: translate(-30px, 2px);
+}
+
+.main-content div span {
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.main-content .content-brief {
+  text-align: center;
+  height: 18px;
+  line-height: 18px;
+  width: 250px;
+  color: #78828a;
+  letter-spacing: .5px;
+  white-space: pre-line;
+  margin-bottom: 80px;
+}
+
+/* PDF iframe设置 */
+.main-content #my-iframe {
+  margin-top: 5px;
+}
+
+/* To Do List 设置 */
+.main-content .TDL {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+/* TDL  左半计数部分 */
+.main-content .TDL-sum {
+  color: #51a8f3;
+  height: 100%;
+  width: 350px;
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content .TDL-sum span {
+  font-size: 208px;
+  font-weight: 500;
+}
+
+.main-content .TDL-sum .iconfont {
+  font-size: 60px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .65s all;
+}
+
+.main-content .TDL-sum .iconfont:hover {
+  transform: scale(1.3);
+}
+
+/* TDL  右半内容部分  */
+.main-content .TDL-content {
+  height: 100%;
+  width: 800px;
+  margin-top: 10px;
+}
+
+.main-content .TDL-content .TDL-checkbox {
+  margin: 0 auto;
+  height: 70px;
+  line-height: 70px;
+  letter-spacing: .4px;
+  width: 600px;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+}
+
+.main-content .TDL-content .TDL-checkbox span {
+  font-size: 28px;
+  font-weight: 300;
+  color: #666;
+}
+
+.main-content .TDL-content .TDL-checkbox i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 遮罩层 */
+
+/* 遮罩层样式 */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* 半透明黑色背景 */
+  z-index: 1;
+}
+
+/* 模态框容器样式 */
+.modal-container {
+  height: 200px;
+  width: 400px;
+  border-radius: 9px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.modal-container h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #51a8f3;
+}
+
+.modal-container input {
+  position: absolute;
+  font-size: 25px;
+  color: #666;
+  font-weight: 300;
+  padding-left: 3px;
+  letter-spacing: .2px;
+  width: 88%;
+  top: 40%;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#closeModalButton {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  cursor: pointer;
+}
+
+#saveModalButton {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  cursor: pointer;
+}
+
+/* #endregion 中心区 */

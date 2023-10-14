@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherry Bomb</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./素材/reset.css">
+
+    <!-- async可以让js最后加载 -->
+    <script src="./index.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js" async></script>
+
+</head>
+
+<body>
+    <!-- 侧边栏 -->
+    <div class="main-sidebar">
+        <!-- 图标 -->
+        <div class="sidebar-brand">
+            <img src="./素材/樱桃.svg" alt="cherry" class="cherry">
+        </div>
+
+        <!-- 菜单 -->
+        <ul class="sidebar-menu">
+
+            <!-- 首页 -->
+            <li class="active">
+                <a href="./Cherry Bomb.html" data-page="首页">
+                    <div class="iconfont">&#xe62a;</div>
+                    首页
+                </a>
+            </li>
+
+            <!-- 帮助 -->
+            <li>
+                <a>
+                    <div class="iconfont">&#xe619;</div>
+                    帮助
+                </a>
+            </li>
+
+            <li class="menu-header">前端
+
+                <!-- HTML -->
+            <li class="dropdown">
+
+                <!-- 列表标题 -->
+                <a class="menu-nav">
+                    <div class="iconfont">&#xe635;</div>
+                    HTML
+
+                    <!-- 箭头图标 -->
+                    <div class="iconfont dropdown-arrow">&#xe65f;</div>
+                </a>
+
+                <!-- 下拉列表 -->
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="../../HTML/HTML.html" data-page="HTML" data-type="iframe">HTML</a>
+                    </li>
+                    <li>
+                        <a href="../../HTML/HTML5.html" data-page="HTML5" data-type="iframe">HTML5</a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <!-- CSS -->
+            <li class="dropdown">
+
+                <!-- 列表标题 -->
+                <a class="menu-nav">
+                    <div class="iconfont">&#xe635;</div>
+                    CSS
+
+                    <!-- 箭头图标 -->
+                    <div class="iconfont dropdown-arrow">&#xe65f;</div>
+                </a>
+
+                <!-- 下拉列表 -->
+                <ul class="dropdown-menu">
+                    <li>
+                        <a data-page="CSS" data-type="content">CSS</a>
+                    </li>
+                    <li>
+                        <a data-page="CSS3" data-type="content">CSS3</a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <!-- JS -->
+            <li class="dropdown">
+
+                <!-- 列表标题 -->
+                <a class="menu-nav">
+                    <div class="iconfont">&#xe635;</div>
+                    JavaScript
+
+                    <!-- 箭头图标 -->
+                    <div class="iconfont dropdown-arrow">&#xe65f;</div>
+                </a>
+
+                <!-- 下拉列表 -->
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="../../JavaScript/JS基础.html" data-page="JS基础">JS基础</a>
+                    </li>
+                    <li>
+                        <a href="../../JavaScript/Web Api.html" data-page="webApi">webApi</a>
+                    </li>
+                    <li>
+                        <a href="../../JavaScript/JS进阶.html" data-page="JS进阶">JS进阶</a>
+                    </li>
+                </ul>
+            </li>
+
+            </li>
+
+            <li class="menu-header">考研
+
+            <li>
+                <a>
+                    <div class="iconfont">&#xe603;</div>
+                    数据结构与算法
+                </a>
+            </li>
+
+            <li>
+                <a>
+                    <div class="iconfont">&#xe603;</div>
+                    操作系统
+                </a>
+            </li>
+
+            <li>
+                <a>
+                    <div class="iconfont">&#xe603;</div>
+                    计算机组成原理
+                </a>
+            </li>
+
+            <li>
+                <a>
+                    <div class="iconfont">&#xe603;</div>
+                    计算机网络
+                </a>
+            </li>
+
+            </li>
+
+            <li class="menu-header">杂七杂八
+
+            <li>
+                <a href="./素材/markdown操作指南👍.pdf" data-page="MD教学">
+                    <div class="iconfont">&#xe600;</div>
+                    MD教学
+                </a>
+            </li>
+            <li>
+                <a>
+                    <div class="iconfont">&#xe600;</div>
+                    HK攻略
+                </a>
+            </li>
+            <li>
+                <a href="#" data-page="To Do List">
+                    <div class="iconfont">&#xe600;</div>
+                    To Do List
+                </a>
+            </li>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- 中心区 -->
+    <div class="container">
+        <div class="topbar init">首页</div>
+
+        <!-- 时间 -->
+        <div class="timebar init">
+            现在时间是
+            <div class="nowtime"></div>
+        </div>
+
+        <!-- 内容区 -->
+        <div class="main-content">
+
+            <!-- 默认内容 -->
+            <div class="content init">
+                <a href="#" target="_blank">
+
+                    <!-- 标题部分 -->
+                    <div class="content-brand">
+                        <i class="iconfont">&#xe62a;</i>
+                        <span>前端</span>
+                    </div>
+
+                    <!-- 简介部分 -->
+                    <div class="content-brief">
+                        你说得对，但是我觉得。你说得对，但是我觉得。你说得对，但是我觉得。你说得对，但是我觉得。1234
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="content init">
+                <a href="#" target="_blank">
+
+                    <!-- 标题部分 -->
+                    <div class="content-brand">
+                        <i class="iconfont">&#xe62a;</i>
+                        <span>考研</span>
+                    </div>
+
+                    <!-- 简介部分 -->
+                    <div class="content-brief">
+                        你说得对，但是我觉得。你说得对，但是我觉得。你说得对，但是我觉得。你说得对，但是我觉得。1234
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="content init">
+                <a href="#" target="_blank">
+
+                    <!-- 标题部分 -->
+                    <div class="content-brand">
+                        <i class="iconfont">&#xe62a;</i>
+                        <span>杂七杂八</span>
+                    </div>
+
+                    <!-- 简介部分 -->
+                    <div class="content-brief">
+                        你说得对，但是我觉得。你说得对，但是我觉得。你说得对，但是我觉得。你说得对，但是我觉得。1234
+                    </div>
+
+                </a>
+            </div>
+            
+        </div>
+
+        <!-- 遮罩模态框 -->
+
+        <!-- 遮罩层 -->
+        <div class="modal-overlay" id="modalOverlay"></div>
+
+        <!-- 模态框容器 -->
+        <div class="modal-container" id="modalContainer">
+            <h2>TO DO LIST</h2>
+            <input type="text" id="textModal">
+            <button id="closeModalButton">关闭</button>
+            <button id="saveModalButton">保存</button>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
